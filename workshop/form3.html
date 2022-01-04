@@ -1,0 +1,24 @@
+<h1>這是一個註冊表單</h1>
+<form action="http://140.127.196.92:1234/formws3"  method="POST">
+  <p> 使用者名稱 : <input type="text" placeholder="您的使用者名稱"/>
+  <p> 密碼 : <input type="password" placeholder="您的密碼"/>
+  
+    
+  <p> 來自 <select name="come_from">
+    <option value="taipei" selected>台北</option>
+    <option value="taichung">台中</option>
+    <option value="tainan">台南</option>
+    <option value="kaohsiung">高雄</option>
+  </select>  
+  </p>
+    
+  <p> 性別： </p>
+  <input type="radio" name="sex" value="male" checked>
+  <a>男</a>
+  <input type="radio" name="sex" value="female">
+  <a>女</a>
+  <input type="radio" name="sex" value="others">
+  <a>其他</a>
+    
+  <p> <button class="btn btn-primary" type="submit">submit</button>
+</form>
