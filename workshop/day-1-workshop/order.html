@@ -1,0 +1,25 @@
+<h1>你的購物車</h1>
+<form action="http://140.127.196.92:1234/formws5"  method="POST">
+  <p> 來自 <select name="come_from">
+    <option value="taipei" selected>台北</option>
+    <option value="taichung">台中</option>
+    <option value="tainan">台南</option>
+    <option value="kaohsiung">高雄</option>
+  </select> 
+  <p> 你的地址 : <input type="text" placeholder="您的地址"/>
+  </p>
+    
+  <p> 性別： </p>
+  <input type="radio" name="sex" value="male" checked>
+  <a>男</a>
+  <input type="radio" name="sex" value="female">
+  <a>女</a>
+  <input type="radio" name="sex" value="others">
+  <a>其他</a>
+    
+
+  <p> 請留下您寶貴的意見 </p>
+  <textarea name="comment" rows="4" cols="50"> 請留下約 100 字以內的意見。</textarea>
+
+  <p> <button class="btn btn-primary" type="submit">submit</button>
+</form>
