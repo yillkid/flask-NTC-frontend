@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function formCheck() {
+  var age = document.getElementById("age").value;
+  age = Number(age);
+  if (age <18) {
+    alert("你未成年！");
+    return false;
+  }
+  
+    document.getElementById("order").submit();
+}
+</script>
+</head>
+
+<body>
+
+<h2>HTML Forms</h2>
+
+<form id="order" action="http://140.127.196.92:1234/formws5" method="post">
+  <label for="name">name:</label><br>
+  <input type="text" id="name" name="name" value="John"><br>
+  <label for="lage">age:</label><br>
+  <input type="text" id="age" name="age" value="12"><br><br>
+  <button onclick="return formCheck(this);">Submit</button>
+</form> 
+
+</body>
+</html>
+

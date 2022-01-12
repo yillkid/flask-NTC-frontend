@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+      function test() {
+        var xhr = new XMLHttpRequest();
+        console.log("我剛剛宣告 XMLHttpRequest, readyState = " + xhr.readyState);
+	xhr.open('post', 'http://140.127.196.92:1234/formws5', true);
+        console.log("已經 open 了但還沒傳資料, readyState = " + xhr.readyState);
+        xhr.send();
+        console.log("send 惹 (但 send 沒那麼好捕捉), readyState = " + xhr.readyState);
+      
+        xhr.onload = function() {
+          console.log("ready, readyState = " + xhr.readyState);
+	  console.log(xhr.responseText);
+	}
+      }
+      test();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

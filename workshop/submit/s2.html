@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function addSomeInfo() {
+  var form = document.getElementById("order");
+  
+  var element1 = document.createElement("input");
+  element1.type = "hidden";
+  element1.value="0001";
+  element1.name="productNo";
+  form.appendChild(element1);  
+}
+
+function formCheck() {
+  var age = document.getElementById("age").value;
+  age = Number(age);
+  if (age <18) {
+    alert("你未成年！");
+    return false;
+  }
+  
+  var form = document.getElementById("order");
+  form.submit();
+}
+</script>
+</head>
+
+<body onload="addSomeInfo()">
+
+<h2>HTML Forms</h2>
+
+<form id="order" action="http://140.127.196.92:1234/formws5" method="post">
+  <label for="name">name:</label><br>
+  <input type="text" id="name" name="name" value="John"><br>
+  <label for="lage">age:</label><br>
+  <input type="text" id="age" name="age" value="18"><br><br>
+  <button onclick=" return formCheck(this);">Submit</button>
+</form> 
+
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      function test_async() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://140.127.196.92:1234/formws5', true);
+        xhr.send();
+      
+        xhr.onload = function() {
+	  console.log(xhr.responseText);
+	  document.getElementById("show").innerHTML = xhr.responseText;
+	}
+      }
+      test_async();
+    </script>
+  </head>
+  <body>
+    <div id="show"></div>
+
+  </body>
+</html>
